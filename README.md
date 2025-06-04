@@ -4,7 +4,7 @@ Este repositório contém documentos de padrões e diretrizes para o desenvolvim
 
 ## Estrutura
 
-- `docs/padroes-e-diretrizes.md`: Documento principal contendo diretrizes de boas práticas.
+- `docs/padroes-e-diretrizes.md`: Documento principal contendo diretrizes de boas práticas, incluindo convenções de branches, commits e versionamento.
 
 ## Contribuindo
 
