@@ -18,6 +18,10 @@ Este documento descreve boas práticas e padrões recomendados para projetos man
 2. Inclua referência a issues quando aplicável.
 3. Mantenha o escopo do PR focado em uma única tarefa.
 
+## Para Contribuidores
+
+Para informações detalhadas sobre como abrir issues, enviar pull requests e interagir durante o processo de revisão, consulte o documento [Guia de Contribuição](contribuicao.md).
+
 ## Licença
 
 Os documentos seguem a licença MIT, presente neste repositório.

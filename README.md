@@ -5,6 +5,7 @@ Este repositório contém documentos de padrões e diretrizes para o desenvolvim
 ## Estrutura
 
 - `docs/padroes-e-diretrizes.md`: Documento principal contendo diretrizes de boas práticas.
+- `docs/contribuicao.md`: Passo a passo para colaborar com projetos do ecossistema.
 
 ## Contribuindo
 
