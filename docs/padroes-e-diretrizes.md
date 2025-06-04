@@ -24,6 +24,21 @@ Este documento descreve boas práticas e padrões recomendados para projetos man
 2. Limite a primeira linha a 72 caracteres.
 3. Use paragrafos adicionais para detalhes quando necessario.
 
+## Commits
+
+- Escreva mensagens de commit claras e objetivas.
+- Utilize o tempo verbal no imperativo ("Adiciona recurso X").
+
+## Branches
+
+- Padronize nomes de branches com o prefixo `feature/`, `fix/` ou `docs/`.
+- Evite nomes longos ou genéricos.
+
+## Revisão de Código
+
+1. Solicite revisão de pelo menos uma pessoa.
+2. Comente trechos de código que mereçam atenção especial.
+
 ## Pull Requests
 
 1. Descreva de forma objetiva o que está sendo alterado.
