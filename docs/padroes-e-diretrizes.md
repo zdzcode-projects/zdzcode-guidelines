@@ -21,3 +21,30 @@ Este documento descreve boas práticas e padrões recomendados para projetos man
 ## Licença
 
 Os documentos seguem a licença MIT, presente neste repositório.
+
+## Branches
+
+- Mantenha uma branch principal chamada `main`.
+- Crie branches de funcionalidade com o prefixo `feature/`.
+- Para correções de bugs utilize o prefixo `bugfix/`.
+
+## Commits
+
+- Escreva mensagens curtas e objetivas.
+- Utilize o tempo verbal no imperativo (ex: "Adiciona nova função").
+- Agrupe alterações relacionadas em um único commit sempre que possível.
+
+## Issues
+
+- Abra issues descrevendo claramente o problema ou proposta.
+- Quando possível, associe pull requests às issues correspondentes.
+
+## Documentação
+
+- Todo projeto deve possuir um `README.md` detalhado.
+- Utilize a pasta `docs/` para guias adicionais e referências.
+
+## Integração Contínua
+
+- Configure pipelines de CI para validar testes e qualidade de código.
+- Automatize verificações de lint e formatação.
