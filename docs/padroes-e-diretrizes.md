@@ -12,11 +12,26 @@ Este documento descreve boas práticas e padrões recomendados para projetos man
 - Prefira código limpo e autocomentado.
 - Utilize ferramentas de formatação e linters adequadas à linguagem do projeto.
 
+## Mensagens de Commit
+
+- Escreva mensagens curtas em português, no imperativo.
+- Quando necessário, explique o contexto no corpo do commit.
+
 ## Pull Requests
 
 1. Descreva de forma objetiva o que está sendo alterado.
 2. Inclua referência a issues quando aplicável.
 3. Mantenha o escopo do PR focado em uma única tarefa.
+
+## Testes
+
+- Escreva testes automatizados sempre que possível.
+- Utilize ferramentas de cobertura para garantir qualidade.
+
+## Revisão de Código
+
+- Seja respeitoso e claro nos comentários.
+- Sugestões devem ser acompanhadas de justificativas.
 
 ## Licença
 
