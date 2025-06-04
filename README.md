@@ -4,6 +4,7 @@ Este repositório contém documentos de padrões e diretrizes para o desenvolvim
 
 ## Estrutura
 
+- `docs/README.md`: Visão geral dos documentos.
 - `docs/padroes-e-diretrizes.md`: Documento principal contendo diretrizes de boas práticas.
 
 ## Contribuindo

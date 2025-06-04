@@ -12,6 +12,21 @@ Este documento descreve boas práticas e padrões recomendados para projetos man
 - Prefira código limpo e autocomentado.
 - Utilize ferramentas de formatação e linters adequadas à linguagem do projeto.
 
+## Commits
+
+- Escreva mensagens de commit claras e objetivas.
+- Utilize o tempo verbal no imperativo ("Adiciona recurso X").
+
+## Branches
+
+- Padronize nomes de branches com o prefixo `feature/`, `fix/` ou `docs/`.
+- Evite nomes longos ou genéricos.
+
+## Revisão de Código
+
+1. Solicite revisão de pelo menos uma pessoa.
+2. Comente trechos de código que mereçam atenção especial.
+
 ## Pull Requests
 
 1. Descreva de forma objetiva o que está sendo alterado.
