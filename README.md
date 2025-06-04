@@ -6,6 +6,7 @@ Este repositório contém documentos de padrões e diretrizes para o desenvolvim
 
 - `docs/README.md`: Visão geral dos documentos.
 - `docs/padroes-e-diretrizes.md`: Documento principal contendo diretrizes de boas práticas.
+- `docs/guia-de-commits.md`: Regras para mensagens de commit e nomenclatura de branches.
 
 ## Contribuindo
 

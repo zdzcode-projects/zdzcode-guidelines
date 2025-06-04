@@ -2,6 +2,8 @@
 
 Este documento descreve boas práticas e padrões recomendados para projetos mantidos pela comunidade ZDZCode.
 
+Para convenções de commits e branches, consulte o documento [Guia de Commits](guia-de-commits.md).
+
 ## Estrutura de Repositórios
 
 1. Utilize um `README.md` com objetivo do projeto e instruções básicas.
