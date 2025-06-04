@@ -21,3 +21,13 @@ Este documento descreve boas práticas e padrões recomendados para projetos man
 ## Licença
 
 Os documentos seguem a licença MIT, presente neste repositório.
+
+## Versionamento
+
+- Utilize versionamento semântico (semver) para releases.
+- Mantenha um CHANGELOG documentando alterações significativas.
+
+## Organização de Issues
+
+1. Classifique issues com labels apropriadas.
+2. Feche issues apenas quando o código correspondente for integrado.
