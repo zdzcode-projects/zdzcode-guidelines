@@ -5,6 +5,18 @@ Claro! A seguir está a versão atualizada do arquivo `agents.md` para o seu Cod
 🧠 agents.md
 ============
 
+📌 Diretrizes para o Agente
+---------------------------
+
+*   **Consistência**: Assegurar que todos os documentos sigam a estrutura e terminologia padronizadas.
+    
+*   **Atualização Contínua**: Manter os documentos atualizados conforme mudanças na arquitetura ou nas práticas da equipe.
+    
+*   **Clareza e Objetividade**: Utilizar linguagem clara, evitando jargões desnecessários, para facilitar o entendimento por todos os stakeholders.
+    
+*   **Referências**: Incluir referências a documentos externos ou internos relevantes que complementem as informações apresentadas.[awari.com.br](https://awari.com.br/documento-de-arquitetura-de-software-exemplo-e-estrutura-para-a-documentacao-adequada/?utm_source=chatgpt.com)
+
+
 Visão Geral
 -----------
 
