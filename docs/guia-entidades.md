@@ -71,11 +71,49 @@ public class PedidoConfiguration : IEntityTypeConfiguration<Pedido>
 
 Registre as configurações no `DbContext` do projeto que consome `ZDZCode.Data.EntityFramework`.
 
+### Registro no `DbContext`
+
+No contexto de dados principal, aplique todas as configurações utilizando o método `ApplyConfigurationsFromAssembly`:
+
+```csharp
+public class AppDbContext : DbContext
+{
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
+    }
+}
+```
+
 ## Boas Práticas
 
 - Evite colocar lógica de negócio complexa dentro das entidades; utilize serviços ou agregados.
 - Mantenha as entidades focadas em representar o estado do domínio.
 - Use propriedades `private set` ou métodos para controlar alterações quando necessário.
+
+## Exemplo Completo
+
+```csharp
+public class Pedido : BaseEntity
+{
+    public DateTime CriadoEm { get; private set; }
+    public DateTime? AtualizadoEm { get; private set; }
+    public StatusPedido Status { get; private set; }
+    public ICollection<ItemPedido> Itens { get; private set; } = new List<ItemPedido>();
+}
+
+public class PedidoConfiguration : IEntityTypeConfiguration<Pedido>
+{
+    public void Configure(EntityTypeBuilder<Pedido> builder)
+    {
+        builder.ToTable("Pedidos");
+        builder.HasKey(p => p.Id);
+        builder.Property(p => p.CriadoEm).IsRequired();
+        builder.Property(p => p.AtualizadoEm);
+        builder.HasMany(p => p.Itens).WithOne().HasForeignKey("PedidoId");
+    }
+}
+```
 
 Seguindo estas recomendações suas entidades continuarão compatíveis com a biblioteca de acesso a dados da ZDZCode e padronizadas com o restante dos projetos.
 

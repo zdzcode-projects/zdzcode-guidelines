@@ -2,6 +2,8 @@
 
 Este guia detalha como nomear propriedades em classes de entidade para manter a consistência dos projetos **ZDZCode** e garantir total compatibilidade com a biblioteca `ZDZCode.Data.EntityFramework`.
 
+Consulte o [Guia de Entidades](./guia-entidades.md) para um passo a passo completo de criação e mapeamento.
+
 ## Regras Básicas
 
 1. Utilize **PascalCase** em todas as propriedades públicas.
