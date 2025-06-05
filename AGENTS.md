@@ -19,7 +19,7 @@ Claro! A seguir está a versão atualizada do arquivo `agents.md` para o seu Cod
 
 
 #Projetos de exemplo na pasta exemplos
-
+Utilize estes projetos de exemplo como base auxiliar para vc gerar a documentação de padrõs
 #Class library C#
 
 Biblioteca base da ZDZCode para acesso a dados: ZDZCode.Data.EntityFramework
