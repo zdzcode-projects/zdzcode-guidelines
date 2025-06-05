@@ -34,6 +34,8 @@ public class Produto : BaseEntity
 
 ## Nomenclatura de Propriedades
 
+Para convenções detalhadas, consulte [Nomenclatura de Propriedades em Entidades](./nomenclatura-propriedades-entidade.md).
+
 - Use **PascalCase** em todas as propriedades públicas.
 - Utilize nomes no singular que representem o conceito de negócio.
 - Prefira nomes claros em português, evitando abreviações desnecessárias.

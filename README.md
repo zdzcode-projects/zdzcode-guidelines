@@ -9,6 +9,7 @@ Este repositório contém documentos de padrões e diretrizes para o desenvolvim
 - `docs/guia-de-commits.md`: Regras para mensagens de commit e nomenclatura de branches.
 - `docs/orientacoes-desenvolvedores.md`: Guia de trabalho para desenvolvedores com exemplos de projetos.
 - `docs/nomenclatura-variaveis-servico.md`: Orientações para nomear variáveis nas classes de serviço.
+- `docs/nomenclatura-propriedades-entidade.md`: Guia de nomenclatura de propriedades em entidades.
 
 ## Contribuindo
 
