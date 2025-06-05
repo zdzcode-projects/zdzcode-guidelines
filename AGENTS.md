@@ -17,6 +17,29 @@ Claro! A seguir está a versão atualizada do arquivo `agents.md` para o seu Cod
 *   **Referências**: Incluir referências a documentos externos ou internos relevantes que complementem as informações apresentadas.[awari.com.br](https://awari.com.br/documento-de-arquitetura-de-software-exemplo-e-estrutura-para-a-documentacao-adequada/?utm_source=chatgpt.com)
 
 
+
+#Projetos de exemplo na pasta exemplos
+
+#Class library C#
+
+Biblioteca base da ZDZCode para acesso a dados: ZDZCode.Data.EntityFramework
+Implementação de api da Linx: ZDZCode.OMS.Linx
+Implementação da api da Marvin: ZDZCode.Payments.Marvin
+Implementação da api do Azure Devops: ZDZCode.ProjectManagement.AzureDevops
+Biblioteca de centralização de testes: ZDZCode.Tests.Core
+
+Biblioteca de dominio do projeto OMS: OMS.Domain
+
+#API em C#
+
+API do projeto OMS: OMS.API
+
+#Frontend
+Projeto centralizador de componentes de frontend: ZDZCode.NuxtKit
+Projeto de frontend da OMS: OMS.WEB
+
+
+
 Visão Geral
 -----------
 
