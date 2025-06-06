@@ -10,74 +10,49 @@ Para convenções de commits e branches, consulte o documento [Guia de Commits](
 2. Adote uma convenção de nomes consistente para branches e commits.
 3. Mantenha arquivos de configuracao e scripts de automacao em pastas dedicadas.
 
-## Convencoes de Branches
+## Branches
 
-- Use o formato `<tipo>/<descricao-curta>` ao criar branches.
-  - `feature/` para novas funcionalidades.
-  - `fix/` para correcoes de bugs.
-  - `chore/` para tarefas de manutencao.
+- Mantenha uma branch principal chamada `main`.
+- Utilize o formato `<tipo>/<descricao-curta>` ao nomear branches. Exemplos de tipos:
+    - `feature/`: para novas funcionalidades.
+    - `fix/` ou `bugfix/`: para correções de bugs.
+    - `docs/`: para alterações na documentação.
+    - `chore/`: para tarefas de manutenção e outras alterações que não se encaixam nas categorias anteriores.
+- Evite nomes longos ou genéricos.
 ## Estilo de Código
 
 - Prefira código limpo e autocomentado.
 - Utilize ferramentas de formatação e linters adequadas à linguagem do projeto.
-## Mensagens de Commit
-
-1. Escreva mensagens no imperativo, em portugues.
-2. Limite a primeira linha a 72 caracteres.
-3. Use paragrafos adicionais para detalhes quando necessario.
-
 ## Commits
 
-- Escreva mensagens de commit claras e objetivas.
-- Utilize o tempo verbal no imperativo ("Adiciona recurso X").
-
-## Branches
-
-- Padronize nomes de branches com o prefixo `feature/`, `fix/` ou `docs/`.
-- Evite nomes longos ou genéricos.
-
-## Revisão de Código
-
-1. Solicite revisão de pelo menos uma pessoa.
-2. Comente trechos de código que mereçam atenção especial.
+- Escreva mensagens de commit claras, objetivas e no imperativo (ex: "Adiciona funcionalidade X" em vez de "Adicionando funcionalidade X" ou "Funcionalidade X adicionada").
+- As mensagens devem ser em português.
+- Limite a primeira linha da mensagem a 72 caracteres.
+- Utilize parágrafos adicionais para fornecer detalhes quando necessário.
+- Agrupe alterações relacionadas em um único commit sempre que possível.
 
 ## Pull Requests
 
-1. Descreva de forma objetiva o que está sendo alterado.
-2. Inclua referência a issues quando aplicável.
-3. Mantenha o escopo do PR focado em uma única tarefa.
+- Descreva de forma objetiva o que está sendo alterado no Pull Request.
+- Inclua referência a issues quando aplicável.
+- Mantenha o escopo do PR focado em uma única tarefa.
 
-## Revisao de Codigo
+## Revisão de Código
 
-- Todo PR deve ser revisado por pelo menos uma pessoa.
-- Utilize comentarios construtivos e objetivos.
-- Aprove mudancas somente apos garantir que testes automatizados estejam passando.
+- Todo Pull Request (PR) deve ser revisado por pelo menos uma pessoa.
+- Solicite revisão e, ao criar o PR, comente trechos de código que mereçam atenção especial.
+- Durante a revisão, utilize comentários construtivos e objetivos.
+- Aprove mudanças somente após garantir que os testes automatizados estejam passando e que as discussões tenham sido resolvidas.
 
 ## Issues
 
-- Registre bugs e sugestoes por meio de issues.
-- Descreva passos para reproduzir problemas ou resultados esperados.
-- Utilize labels para organizar prioridades.
+- Registre bugs, sugestões e propostas por meio de issues.
+- Descreva claramente o problema, incluindo passos para reproduzir (no caso de bugs) ou os resultados esperados (para sugestões/propostas).
+- Utilize labels para organizar e priorizar as issues.
+- Quando possível, associe pull requests às issues correspondentes.
 ## Licença
 
 Os documentos seguem a licença MIT, presente neste repositório.
-
-## Branches
-
-- Mantenha uma branch principal chamada `main`.
-- Crie branches de funcionalidade com o prefixo `feature/`.
-- Para correções de bugs utilize o prefixo `bugfix/`.
-
-## Commits
-
-- Escreva mensagens curtas e objetivas.
-- Utilize o tempo verbal no imperativo (ex: "Adiciona nova função").
-- Agrupe alterações relacionadas em um único commit sempre que possível.
-
-## Issues
-
-- Abra issues descrevendo claramente o problema ou proposta.
-- Quando possível, associe pull requests às issues correspondentes.
 
 ## Documentação
 
