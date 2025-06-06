@@ -6,5 +6,5 @@ Este diretório contém documentos para orientar projetos do ecossistema **ZDZCo
 - [Guia de Commits](./guia-de-commits.md): regras para mensagens de commit e nomenclatura de branches.
 - [Guia de Trabalho para Desenvolvedores](./orientacoes-desenvolvedores.md): orientações de fluxo e exemplos de projetos.
 - [Nomenclatura de Variáveis em Serviços](./nomenclatura-variaveis-servico.md): padrões para nomear variáveis em classes de serviço.
-- [Guia de Entidades](./guia-entidades.md): como criar classes de entidade compatíveis com o ZDZCode.Data.EntityFramework.
+- [Guia de Entidades](./guia-entidades.md): passo a passo para criar e mapear entidades compatíveis com o ZDZCode.Data.EntityFramework.
 - [Nomenclatura de Propriedades em Entidades](./nomenclatura-propriedades-entidade.md): guia para nomear propriedades em classes de entidade.
