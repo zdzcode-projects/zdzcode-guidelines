@@ -2,19 +2,26 @@
 
 Este documento reúne orientações básicas para trabalhar nos projetos do ecossistema **ZDZCode**. Utilize-o em conjunto com o [Padrões e Diretrizes](padroes-e-diretrizes.md) e o [Guia de Commits](guia-de-commits.md).
 
-## Projetos de Exemplo
+## Projetos de Referência
 
-Os repositórios de exemplo, localizados na pasta `exemplos`, podem ser utilizados como referência inicial. Eles incluem:
+Os projetos listados abaixo servem como referência para implementação de padrões. Consulte o [Guia para Agentes](../AGENTS.md) para detalhes técnicos completos sobre cada projeto:
 
-- **ZDZCode.Data.EntityFramework**: Biblioteca para acesso a dados.
-- **ZDZCode.OMS.Linx**: Implementação da API da Linx.
-- **ZDZCode.Payments.Marvin**: Implementação da API da Marvin.
-- **ZDZCode.ProjectManagement.AzureDevops**: Integração com Azure DevOps.
-- **ZDZCode.Tests.Core**: Utilitário para testes.
-- **OMS.Domain**: Domínio do projeto OMS.
-- **OMS.API**: API principal do projeto OMS.
-- **ZDZCode.NuxtKit**: Componentes compartilhados de frontend.
-- **OMS.WEB**: Frontend da OMS.
+### Bibliotecas Base (.NET)
+- **ZDZCode.Data.EntityFramework**: Biblioteca para acesso a dados com Entity Framework
+- **ZDZCode.Tests.Core**: Utilitários centralizados para testes
+
+### Integrações e APIs
+- **ZDZCode.OMS.Linx**: Implementação da API da Linx
+- **ZDZCode.Payments.Marvin**: Implementação da API da Marvin  
+- **ZDZCode.ProjectManagement.AzureDevops**: Integração com Azure DevOps
+
+### Projeto OMS (Exemplo Completo)
+- **OMS.Domain**: Biblioteca de domínio seguindo Clean Architecture
+- **OMS.API**: API REST principal com documentação OpenAPI
+- **OMS.WEB**: Frontend Vue 3 + Nuxt 3
+
+### Frontend Compartilhado
+- **ZDZCode.NuxtKit**: Componentes e utilitários compartilhados para projetos Nuxt
 
 ## Fluxo de Trabalho
 
