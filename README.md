@@ -11,6 +11,7 @@ Este repositório contém documentos de padrões e diretrizes para o desenvolvim
 - `docs/nomenclatura-variaveis-servico.md`: Orientações para nomear variáveis nas classes de serviço.
 - `docs/guia-entidades.md`: Passo a passo para criar e mapear entidades compatíveis com o ZDZCode.Data.EntityFramework.
 - `docs/nomenclatura-propriedades-entidade.md`: Guia de nomenclatura de propriedades em entidades.
+- `docs/guia-agente-implementacao.md`: Guia completo para agentes de IA implementarem endpoints, testes unitários e funcionalidades seguindo os padrões ZDZCode.
 
 ## Contribuindo
 
