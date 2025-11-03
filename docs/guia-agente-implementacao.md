@@ -269,6 +269,10 @@ namespace [Projeto].Infrastructure.Data.Repositories
 
         public async Task AtualizarAsync(Pedido pedido)
         {
+            var pedidoExistente = await ObterPorIdAsync(pedido.Id);
+            if (pedidoExistente == null)
+                throw new InvalidOperationException($"Pedido com ID {pedido.Id} não encontrado");
+
             _context.Pedidos.Update(pedido);
             await _context.SaveChangesAsync();
         }
@@ -905,7 +909,10 @@ export const usePedidos = () => {
 
   const listarPedidos = async (): Promise<Pedido[]> => {
     try {
-      const { data } = await useFetch<Pedido[]>(`${baseUrl}/api/pedidos`)
+      const { data, error } = await useFetch<Pedido[]>(`${baseUrl}/api/pedidos`)
+      if (error.value) {
+        throw new Error(`Erro ao listar pedidos: ${error.value.message}`)
+      }
       return data.value || []
     } catch (error) {
       console.error('Erro ao listar pedidos:', error)
@@ -915,7 +922,10 @@ export const usePedidos = () => {
 
   const obterPedido = async (id: string): Promise<Pedido | null> => {
     try {
-      const { data } = await useFetch<Pedido>(`${baseUrl}/api/pedidos/${id}`)
+      const { data, error } = await useFetch<Pedido>(`${baseUrl}/api/pedidos/${id}`)
+      if (error.value) {
+        throw new Error(`Erro ao obter pedido: ${error.value.message}`)
+      }
       return data.value
     } catch (error) {
       console.error('Erro ao obter pedido:', error)
@@ -925,11 +935,17 @@ export const usePedidos = () => {
 
   const criarPedido = async (dto: CriarPedidoDto): Promise<Pedido> => {
     try {
-      const { data } = await useFetch<Pedido>(`${baseUrl}/api/pedidos`, {
+      const { data, error } = await useFetch<Pedido>(`${baseUrl}/api/pedidos`, {
         method: 'POST',
         body: dto
       })
-      return data.value!
+      if (error.value) {
+        throw new Error(`Erro ao criar pedido: ${error.value.message}`)
+      }
+      if (!data.value) {
+        throw new Error('Resposta inválida do servidor')
+      }
+      return data.value
     } catch (error) {
       console.error('Erro ao criar pedido:', error)
       throw error
