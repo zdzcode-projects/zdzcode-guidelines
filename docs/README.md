@@ -10,6 +10,7 @@ Este diretório contém documentos para orientar projetos do ecossistema **ZDZCo
 - [Nomenclatura de Variáveis em Serviços](./nomenclatura-variaveis-servico.md): padrões para nomear variáveis em classes de serviço.
 - [Guia de Entidades](./guia-entidades.md): passo a passo para criar e mapear entidades compatíveis com o ZDZCode.Data.EntityFramework.
 - [Nomenclatura de Propriedades em Entidades](./nomenclatura-propriedades-entidade.md): guia para nomear propriedades em classes de entidade.
+- [Guia de Implementação para Agentes de IA](./guia-agente-implementacao.md): guia completo para agentes de IA implementarem endpoints, testes unitários e funcionalidades seguindo os padrões ZDZCode.
 
 ## Biblioteca Asaas (ZDZCode.Payments.Asaas)
 
