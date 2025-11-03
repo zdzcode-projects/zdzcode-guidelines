@@ -148,11 +148,21 @@ namespace ZDZCode.Payments.Asaas.Http.Handlers
     {
         private readonly AsaasOptions _options;
 
+        /// <summary>
+        /// Inicializa uma nova instância do handler de autenticação.
+        /// </summary>
+        /// <param name="options">Opções de configuração do Asaas</param>
         public AuthenticationHandler(IOptions<AsaasOptions> options)
         {
             _options = options.Value;
         }
 
+        /// <summary>
+        /// Envia a requisição HTTP adicionando os headers de autenticação.
+        /// </summary>
+        /// <param name="request">Requisição HTTP</param>
+        /// <param name="cancellationToken">Token de cancelamento</param>
+        /// <returns>Resposta HTTP</returns>
         protected override async Task<HttpResponseMessage> SendAsync(
             HttpRequestMessage request,
             CancellationToken cancellationToken)
@@ -196,6 +206,13 @@ namespace ZDZCode.Payments.Asaas.Errors
         /// </summary>
         public string? RawResponse { get; }
 
+        /// <summary>
+        /// Inicializa uma nova instância da exceção da API Asaas.
+        /// </summary>
+        /// <param name="statusCode">Código de status HTTP</param>
+        /// <param name="message">Mensagem de erro</param>
+        /// <param name="errors">Lista de erros detalhados</param>
+        /// <param name="rawResponse">Corpo bruto da resposta HTTP</param>
         public AsaasApiException(
             HttpStatusCode statusCode,
             string message,
@@ -208,6 +225,10 @@ namespace ZDZCode.Payments.Asaas.Errors
             RawResponse = rawResponse;
         }
 
+        /// <summary>
+        /// Retorna uma representação em string da exceção com detalhes dos erros.
+        /// </summary>
+        /// <returns>String formatada com detalhes da exceção</returns>
         public override string ToString()
         {
             var msg = $"AsaasApiException: {Message} (Status: {StatusCode})";
@@ -246,6 +267,9 @@ namespace ZDZCode.Payments.Asaas.Errors
     /// </summary>
     public class AsaasErrorResponse
     {
+        /// <summary>
+        /// Lista de erros retornados pela API.
+        /// </summary>
         public List<AsaasError> Errors { get; set; } = new();
     }
 }
@@ -416,6 +440,12 @@ namespace ZDZCode.Payments.Asaas.Extensions
     /// </summary>
     internal class AsaasOptionsValidator : IValidateOptions<AsaasOptions>
     {
+        /// <summary>
+        /// Valida as opções de configuração do Asaas.
+        /// </summary>
+        /// <param name="name">Nome das opções</param>
+        /// <param name="options">Opções a serem validadas</param>
+        /// <returns>Resultado da validação</returns>
         public ValidateOptionsResult Validate(string? name, AsaasOptions options)
         {
             if (string.IsNullOrWhiteSpace(options.ApiKey))
@@ -660,60 +690,117 @@ namespace ZDZCode.Payments.Asaas.Clients.Customers.Models
     /// </summary>
     public class CustomerResponse
     {
+        /// <summary>
+        /// ID único do cliente no Asaas.
+        /// </summary>
         [JsonPropertyName("id")]
         public string Id { get; set; } = string.Empty;
 
+        /// <summary>
+        /// Data de criação do cliente.
+        /// </summary>
         [JsonPropertyName("dateCreated")]
         public DateTime DateCreated { get; set; }
 
+        /// <summary>
+        /// Nome do cliente.
+        /// </summary>
         [JsonPropertyName("name")]
         public string Name { get; set; } = string.Empty;
 
+        /// <summary>
+        /// E-mail do cliente.
+        /// </summary>
         [JsonPropertyName("email")]
         public string? Email { get; set; }
 
+        /// <summary>
+        /// Telefone do cliente.
+        /// </summary>
         [JsonPropertyName("phone")]
         public string? Phone { get; set; }
 
+        /// <summary>
+        /// Telefone celular do cliente.
+        /// </summary>
         [JsonPropertyName("mobilePhone")]
         public string? MobilePhone { get; set; }
 
+        /// <summary>
+        /// CPF ou CNPJ do cliente.
+        /// </summary>
         [JsonPropertyName("cpfCnpj")]
         public string? CpfCnpj { get; set; }
 
+        /// <summary>
+        /// CEP do endereço.
+        /// </summary>
         [JsonPropertyName("postalCode")]
         public string? PostalCode { get; set; }
 
+        /// <summary>
+        /// Logradouro do endereço.
+        /// </summary>
         [JsonPropertyName("address")]
         public string? Address { get; set; }
 
+        /// <summary>
+        /// Número do endereço.
+        /// </summary>
         [JsonPropertyName("addressNumber")]
         public string? AddressNumber { get; set; }
 
+        /// <summary>
+        /// Complemento do endereço.
+        /// </summary>
         [JsonPropertyName("complement")]
         public string? Complement { get; set; }
 
+        /// <summary>
+        /// Bairro.
+        /// </summary>
         [JsonPropertyName("province")]
         public string? Province { get; set; }
 
+        /// <summary>
+        /// Cidade.
+        /// </summary>
         [JsonPropertyName("city")]
         public string? City { get; set; }
 
+        /// <summary>
+        /// Estado (UF).
+        /// </summary>
         [JsonPropertyName("state")]
         public string? State { get; set; }
 
+        /// <summary>
+        /// País.
+        /// </summary>
         [JsonPropertyName("country")]
         public string? Country { get; set; }
 
+        /// <summary>
+        /// Referência externa do cliente.
+        /// </summary>
         [JsonPropertyName("externalReference")]
         public string? ExternalReference { get; set; }
 
+        /// <summary>
+        /// Indica se as notificações estão desabilitadas.
+        /// </summary>
         [JsonPropertyName("notificationDisabled")]
         public bool NotificationDisabled { get; set; }
 
+        /// <summary>
+        /// Observações sobre o cliente.
+        /// </summary>
         [JsonPropertyName("observations")]
         public string? Observations { get; set; }
 
+        /// <summary>
+        /// Indica se o cliente foi removido.
+        /// </summary>
         [JsonPropertyName("deleted")]
         public bool Deleted { get; set; }
     }
@@ -778,6 +865,10 @@ namespace ZDZCode.Payments.Asaas.Clients
         private readonly HttpClient _httpClient;
         private readonly JsonSerializerOptions _jsonOptions;
 
+        /// <summary>
+        /// Inicializa uma nova instância do cliente de customers.
+        /// </summary>
+        /// <param name="httpClientFactory">Factory para criação de HttpClient</param>
         public CustomersClient(IHttpClientFactory httpClientFactory)
         {
             _httpClient = httpClientFactory.CreateClient("Asaas");
@@ -989,11 +1080,17 @@ using ZDZCode.Payments.Asaas.Errors;
 
 namespace ZDZCode.Payments.Asaas.Tests.Clients.Customers
 {
+    /// <summary>
+    /// Testes unitários para o cliente de customers.
+    /// </summary>
     public class CustomersClientTests
     {
         private readonly MockHttpMessageHandler _mockHttp;
         private readonly IHttpClientFactory _httpClientFactory;
 
+        /// <summary>
+        /// Inicializa uma nova instância dos testes.
+        /// </summary>
         public CustomersClientTests()
         {
             _mockHttp = new MockHttpMessageHandler();
@@ -1004,6 +1101,9 @@ namespace ZDZCode.Payments.Asaas.Tests.Clients.Customers
             _httpClientFactory.CreateClient("Asaas").Returns(httpClient);
         }
 
+        /// <summary>
+        /// Testa se o método CreateAsync retorna um cliente quando a requisição é válida.
+        /// </summary>
         [Fact]
         public async Task CreateAsync_DeveRetornarCliente_QuandoRequisicaoValida()
         {
@@ -1038,6 +1138,9 @@ namespace ZDZCode.Payments.Asaas.Tests.Clients.Customers
             result.Email.Should().Be("joao@example.com");
         }
 
+        /// <summary>
+        /// Testa se o método CreateAsync lança AsaasApiException quando recebe erro 400.
+        /// </summary>
         [Fact]
         public async Task CreateAsync_DeveLancarAsaasApiException_QuandoErro400()
         {
@@ -1071,6 +1174,9 @@ namespace ZDZCode.Payments.Asaas.Tests.Clients.Customers
                 .Where(ex => ex.Errors!.Any(e => e.Code == "invalid_action"));
         }
 
+        /// <summary>
+        /// Testa se o método ListAllAsync itera corretamente por todas as páginas.
+        /// </summary>
         [Fact]
         public async Task ListAllAsync_DeveIterarTodasPaginas()
         {

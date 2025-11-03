@@ -144,6 +144,9 @@ public class PaymentService
     private readonly ICustomersClient _customersClient;
     private readonly IPaymentsClient _paymentsClient;
 
+    /// <summary>
+    /// Inicializa uma nova instância do serviço de pagamentos.
+    /// </summary>
     public PaymentService(
         ICustomersClient customersClient,
         IPaymentsClient paymentsClient)
@@ -152,6 +155,10 @@ public class PaymentService
         _paymentsClient = paymentsClient;
     }
 
+    /// <summary>
+    /// Cria um cliente e uma cobrança associada.
+    /// </summary>
+    /// <returns>ID da cobrança criada</returns>
     public async Task<string> CreateCustomerAndPayment()
     {
         try
@@ -872,6 +879,9 @@ tests/ZDZCode.Payments.Asaas.Tests/
 Os testes utilizam `MockHttpMessageHandler` para simular respostas da API:
 
 ```csharp
+/// <summary>
+/// Testa a criação de um cliente com sucesso.
+/// </summary>
 [Fact]
 public async Task DeveCriarClienteComSucesso()
 {

@@ -33,12 +33,19 @@ public class PaymentService
     private readonly ICustomersClient _customers;
     private readonly IPaymentsClient _payments;
 
+    /// <summary>
+    /// Inicializa o serviço de pagamentos.
+    /// </summary>
     public PaymentService(ICustomersClient customers, IPaymentsClient payments)
     {
         _customers = customers;
         _payments = payments;
     }
 
+    /// <summary>
+    /// Cria um cliente e uma cobrança de exemplo.
+    /// </summary>
+    /// <returns>URL de pagamento da cobrança criada</returns>
     public async Task<string> CreateFirstPayment()
     {
         // 1. Criar cliente
@@ -241,6 +248,9 @@ public class AsaasWebhookController : ControllerBase
     private readonly IPaymentsClient _paymentsClient;
     private readonly ILogger<AsaasWebhookController> _logger;
 
+    /// <summary>
+    /// Inicializa o controller de webhooks.
+    /// </summary>
     public AsaasWebhookController(
         IPaymentsClient paymentsClient,
         ILogger<AsaasWebhookController> logger)
@@ -348,10 +358,29 @@ public class AsaasWebhookPayload
 
 public class PaymentWebhookData
 {
+    /// <summary>
+    /// ID do pagamento.
+    /// </summary>
     public string Id { get; set; } = string.Empty;
+    
+    /// <summary>
+    /// Valor do pagamento.
+    /// </summary>
     public decimal Value { get; set; }
+    
+    /// <summary>
+    /// Status do pagamento.
+    /// </summary>
     public string Status { get; set; } = string.Empty;
+    
+    /// <summary>
+    /// Data de vencimento.
+    /// </summary>
     public DateTime DueDate { get; set; }
+    
+    /// <summary>
+    /// ID do cliente.
+    /// </summary>
     public string Customer { get; set; } = string.Empty;
 }
 ```
@@ -424,6 +453,12 @@ catch (AsaasApiException ex)
 ### Retry Manual
 
 ```csharp
+/// <summary>
+/// Cria um pagamento com retry manual em caso de erros transitórios.
+/// </summary>
+/// <param name="request">Dados do pagamento</param>
+/// <param name="maxAttempts">Número máximo de tentativas</param>
+/// <returns>Pagamento criado ou null se todas as tentativas falharem</returns>
 public async Task<PaymentResponse?> CreatePaymentWithRetry(
     PaymentRequest request,
     int maxAttempts = 3)
@@ -637,6 +672,10 @@ public async Task<PaymentResponse> CreatePaymentIdempotent(PaymentRequest reques
 ### 5. Use CancellationToken
 
 ```csharp
+/// <summary>
+/// Processa pagamentos com suporte a cancelamento.
+/// </summary>
+/// <param name="cancellationToken">Token de cancelamento</param>
 // ✅ Permitir cancelamento de operações longas
 public async Task ProcessPayments(CancellationToken cancellationToken)
 {
